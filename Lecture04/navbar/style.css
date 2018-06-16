@@ -1,0 +1,8 @@
+nav ul {
+    background-color: beige;
+}
+nav > * > li {
+    border-right: 1px solid lightslategray;
+    padding: 10px;
+    display: inline-block;
+}

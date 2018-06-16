@@ -1,0 +1,12 @@
+div {
+    height: 30px;
+    width: 30px;
+    background-color: grey;
+    margin: 10px;
+    font-size: 20pt;
+    color: white;
+}
+
+#div4 {
+    position: fixed;
+}
