@@ -1,0 +1,40 @@
+div {
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+    background-color: darkslategray;
+}
+#d1 {
+    transform: scale(1.5);
+}
+#d2 {
+    transform: scale(0.5);
+}
+#d3 {
+    transform: scaleX(1.25)
+}
+#d4 {
+    transform: translateX(-50px)
+}
+#d5 {
+    transform: translateY(-50px)
+}
+#d6 {
+    transform: translate(30px, -20px)
+}
+
+#d7 {
+    transform: rotateX(60deg)
+}
+
+#d8 {
+    transform: rotate(45deg)
+}
+
+#d9 {
+    transform: skewY(10deg)
+}
+
+#d10 {
+    transform: matrix(1, 0, 0 ,1, 1,1)
+}
