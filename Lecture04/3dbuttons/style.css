@@ -5,4 +5,20 @@ div {
     display: inline-block;
     background-color: steelblue;
     box-shadow: 4px 4px 5px grey;
+    font-family: sans-serif;
+    color: lightcyan;
+}
+
+div:hover {
+    position: relative;
+    right: 5px;
+    bottom: 5px;
+    box-shadow: 9px 9px 5px grey;
+}
+
+div:active {
+    position: relative;
+    top: 3px;
+    left: 3px;
+    box-shadow: 1px 1px 5px grey;
 }
