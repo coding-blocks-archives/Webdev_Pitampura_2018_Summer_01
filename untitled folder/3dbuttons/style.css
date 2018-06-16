@@ -1,0 +1,8 @@
+div {
+    margin: 20px;
+    padding: 20px;
+    width: 100px;
+    display: inline-block;
+    background-color: steelblue;
+    box-shadow: 4px 4px 5px grey;
+}

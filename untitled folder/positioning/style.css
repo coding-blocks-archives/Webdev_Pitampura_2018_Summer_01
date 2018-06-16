@@ -1,0 +1,21 @@
+.outer {
+    margin: 10px;
+    background-color: aquamarine;
+    padding: 10px;
+}
+.inner {
+    height: 30px;
+    width: 30px;
+    background-color: darkblue;
+    margin: 10px;
+    font-size: 20pt;
+    color: white;
+    box-shadow: 4px 4px 6px grey
+}
+
+#div4 {
+    margin: 0px;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
