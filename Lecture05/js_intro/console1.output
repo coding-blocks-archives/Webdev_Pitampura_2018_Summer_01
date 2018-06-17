@@ -1,0 +1,104 @@
+1
+1
+1 + 1
+2
+let x = 10
+undefined
+x
+10
+x = 'hello'
+"hello"
+x
+"hello"
+x = `world`
+"world"
+typeof 'asdasd'
+"string"
+typeof 'a'
+"string"
+typeof 123123
+"number"
+typeof 123123.123
+"number"
+typeof true
+"boolean"
+typeof false
+"boolean"
+typeof [1,2,3]
+"object"
+let o = {a: 10, b: 'asdasd', c: true}
+undefined
+o
+Object { a: 10, b: "asdasd", c: true }
+typeof o
+"object"
+o.a
+10
+o.b
+"asdasd"
+o.c
+true
+o.d
+undefined
+typeof o.a
+"number"
+typeof o.b
+"string"
+typeof o.c
+"boolean"
+typeof o.d
+"undefined"
+o
+Object { a: 10, b: "asdasd", c: true }
+o.d = [1,2,3]
+Array [ 1, 2, 3 ]
+o
+Object { a: 10, b: "asdasd", c: true, d: Array[3] }
+o.d
+Array [ 1, 2, 3 ]
+o.d[0]
+1
+o.d[1]
+2
+o.d[2]
+3
+o.d[3]
+undefined
+o.d[3] = 10
+10
+o.d
+Array [ 1, 2, 3, 10 ]
+o.d[6] = 10
+10
+o.d
+Array [ 1, 2, 3, 10, <2 empty slots>, 10 ]
+o.d.length
+7
+o.d[5]
+undefined
+o.e = null
+null
+o.e
+null
+o.f
+undefined
+typeof o.e 
+"object"
+x
+"world"
+let x = null
+SyntaxError: redeclaration of let x
+x = null 
+null
+x
+null
+x = undefined
+undefined
+x
+undefined
+x
+undefined
+y
+ReferenceError: y is not defined [Learn More]
+o.p
+undefined

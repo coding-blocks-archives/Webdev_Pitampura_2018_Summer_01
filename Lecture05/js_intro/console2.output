@@ -1,0 +1,36 @@
+1 == 1
+true
+1 == '1'
+true
+1 === '1'
+false
+'' == 0
+true
+let k = 0
+undefined
+k.toString()
+"0"
++'1'
+1
++'0'
+0
++''
+0
+[1,2].toString()
+"1,2"
+[1].toString()
+"1"
+[].toString()
+""
+[] == 0
+true
+true == 1 
+true
+false == 1 
+false
+false == 0
+true
+true == 2
+false
+false == 2
+false

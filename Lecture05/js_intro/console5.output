@@ -1,0 +1,52 @@
++'1'
+1
++'1a'
+NaN
+2 + '1'
+"21"
+2 - '1'
+1
+'2' - 1 
+1
+'2' - '1'
+1
+1 * '1'
+1
+1 * '2'
+2
+'2' * 1
+2
+'2' / 1
+2
+'2' / '1'
+2
+'a' - 'b'
+NaN
+typeof 2
+"number"
+typeof '2'
+"string"
+typeof +'2'
+"number"
+typeof +'a'
+"number"
+1 / 0 
+Infinity
+(1 / 0) + 1
+Infinity
+(1 / 0) - (1 / 0)
+NaN
+let x = 1/0
+undefined
+x
+Infinity
+typeof x 
+"number"
+x - x 
+NaN
+-x 
+-Infinity
+x + 1
+Infinity
+x - 1
+Infinity

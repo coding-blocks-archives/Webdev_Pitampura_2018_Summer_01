@@ -1,0 +1,44 @@
+[1,2] + {a: 10}
+"1,2[object Object]"
+[] + {}
+"[object Object]"
+{} + []
+0
+let o = {}
+undefined
+o
+Object {  }
+let a = []
+undefined
+a
+Array [  ]
+a + o 
+"[object Object]"
+o + a
+"[object Object]"
+{} + []
+0
+o 
+Object {  }
+([] + {})
+"[object Object]"
+({} + [])
+"[object Object]"
+{} + []
+0
+let r1 = [] + {}
+undefined
+let r2 = {} + []
+undefined
+r1
+"[object Object]"
+r2
+"[object Object]"
+{} + []
+0
++[]
+0
+{} + {}
+NaN
++{}
+NaN

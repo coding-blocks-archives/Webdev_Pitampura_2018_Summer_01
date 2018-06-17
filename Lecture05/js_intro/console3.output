@@ -1,0 +1,28 @@
+1 + '1'
+"11"
+'1' + 1 + 1
+"111"
+1 + 1 + '1'
+"21"
+'1' + (1 + 1) + '1'
+"121"
+[1,2] + [1,2]
+"1,21,2"
+[1,2,] + [1,2]
+"1,21,2"
+[1,2,null] + [1,2]
+"1,2,1,2"
+let o = {a: 10, b: 20}
+undefined
+o
+Object { a: 10, b: 20 }
+o.toString()
+"[object Object]"
+JSON.stringify(o)
+"{"a":10,"b":20}"
+let str = JSON.stringify(o)
+undefined
+str
+"{"a":10,"b":20}"
+JSON.parse(str)
+Object { a: 10, b: 20 }
