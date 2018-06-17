@@ -1,0 +1,27 @@
+#d1 {
+    width: 60px;
+    height: 60px;
+    background-color: lightcoral;
+    animation-name: godown;
+    animation-duration: 2s;
+    animation-iteration-count: 5;
+    animation-timing-function: linear;
+}
+
+@keyframes godown {
+    0% {
+        transform: translateY(10px)
+    }
+
+    33% {
+        transform: translate(0px, 100px)
+    }
+
+    66% {
+        transform: translate(100px, 0px)
+    }
+
+    100% {
+        transform: translateY(10px)
+    }
+}

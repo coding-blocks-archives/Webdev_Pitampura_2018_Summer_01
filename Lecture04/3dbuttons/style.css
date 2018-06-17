@@ -7,18 +7,17 @@ div {
     box-shadow: 4px 4px 5px grey;
     font-family: sans-serif;
     color: lightcyan;
+    transition: 0.5s;
 }
 
 div:hover {
-    position: relative;
-    right: 5px;
-    bottom: 5px;
+    transform: translate(-5px, -5px);
     box-shadow: 9px 9px 5px grey;
+    transition: 0.5s;
 }
 
 div:active {
-    position: relative;
-    top: 3px;
-    left: 3px;
+    transform: translate(3px, 3px);
     box-shadow: 1px 1px 5px grey;
+    transition: 0.2s;
 }
