@@ -3,6 +3,7 @@ window.onload = function () {
     let list = this.document.getElementById('list')
     let newtask = this.document.getElementById('newtask')
     let addtask = this.document.getElementById('addtask')
+    let cleardone = this.document.getElementById('cleardone')
     
     window.remove = function (element) {
         // list.removeChild(element.parentElement)

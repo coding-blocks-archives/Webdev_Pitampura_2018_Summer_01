@@ -4,6 +4,8 @@ window.onload = function () {
     let list = this.document.getElementById('list')
     let newtask = this.document.getElementById('newtask')
     let addtask = this.document.getElementById('addtask')
+    let cleardone = this.document.getElementById('cleardone')
+    let sortlist = this.document.getElementById('sortlist')
 
     function retrieveTodos () {
         if (localStorage['todos']) {
@@ -27,13 +29,27 @@ window.onload = function () {
 
         taskSpan.innerText = todo.task
         xBtn.innerText = "X"
-        upBtn.innerText = "V"
-        downBtn.innerText = "^"
+        upBtn.innerText = "^"
+        downBtn.innerText = "V"
         if (todo.done) {
             taskSpan.style.textDecoration = 'line-through'
         }
         xBtn.onclick = function () {
             todos[pos].done = !todos[pos].done
+            saveTodos()
+            refreshList()
+        }
+        downBtn.onclick = function () {
+            if (pos >= todos.length - 1) return
+
+            todos.splice(pos, 0, todos.splice(pos+1, 1)[0])
+            saveTodos()
+            refreshList()
+        }
+        upBtn.onclick = function () {
+            if (pos <= 0) return
+            
+            todos.splice(pos-1, 0, todos.splice(pos, 1)[0])
             saveTodos()
             refreshList()
         }
@@ -62,6 +78,17 @@ window.onload = function () {
     }
 
     addtask.onclick = addTodo
+    cleardone.onclick = function () {
+        todos = todos.filter((t) => !t.done)
+        saveTodos()
+        refreshList()
+    }
+    sortlist.onclick = function () {
+        todos.sort((a,b) => a.done - b.done)
+        saveTodos()
+        refreshList()
+    }
+
     refreshList()
 
 
