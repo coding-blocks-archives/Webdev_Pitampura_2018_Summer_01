@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="wait.js"></script>
+    <script>
+        function wait3Sec() {
+            const start = new Date().getTime()
+            while (new Date().getTime() - start < 3000);
+            console.log("wait over")
+        }
+        function wait4Sec () {
+            setTimeout(function () {
+                console.log("wait over")
+            }, 4000)
+        }
+        var counter = 0
+        function count () {
+            console.log(counter++)
+        }
+    </script>
+</head>
+<body>
+    <button onclick="wait4Sec()" id="start">START</button>
+    <button onclick="count()">CLICK</button>
+    
+</body>
+</html>
