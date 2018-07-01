@@ -6,11 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="jquery-3.3.1.js"></script>
-    <script src="script.js"></script>
+    <script src="todolist.js"></script>
+    <style>
+        .done span {
+            text-decoration: line-through;
+        }
+    </style>
 </head>
 <body>
     <input class="todo" id="newtask">
     <button class="todo" id="addtask">ADD</button>
+    <button id="cleartask">CLEAR</button>
     <ul class="todo" id="todolist"></ul>
 </body>
 </html>

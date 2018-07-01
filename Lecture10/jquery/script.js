@@ -7,8 +7,8 @@ $(() => {
         let task = newtask.val()
         newtask.val('')
         todolist.prepend(
-            $('<li>').text(task).click(function () {
-                $(this).remove()
+            $('<li>').text(task).click((e) => {
+                $(e.currentTarget).remove()
             })
         )
     })
