@@ -1,0 +1,36 @@
+.sidebar {
+    padding: 20px;
+    display: inline-block;
+    background-color: lightgrey;
+    height: 100%;
+    width: 20%
+}
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    height: 100%;
+}
+.content {
+    padding: 20px;
+    display: inline-block;
+    background-color: bisque;
+    height: 100%;
+    width: 60%
+}
+
+@media (max-width: 500px) {
+    .content {
+        display: block;
+        height: auto;
+        width: 100%
+    }
+    .sidebar {
+        display: block;
+        height: auto;
+        width: 100%
+    }
+}
