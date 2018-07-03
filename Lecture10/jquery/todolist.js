@@ -34,6 +34,8 @@ $(() => $('#addtask').click(
             )
         )
     )
-).next().click(
+)
+.click(() => $('#newtask').val(''))
+.next().click(
     () => $('.done').remove()
 ))

@@ -1,0 +1,20 @@
+.container {
+    background-color: orange;
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    /* flex-wrap: wrap-reverse;
+    flex-direction: column-reverse; */
+    flex-flow: row wrap-reverse;
+}
+
+.item {
+    background-color: darkslategray;
+    color: bisque;
+    font-size: 18pt;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border: white 1px solid;
+}
