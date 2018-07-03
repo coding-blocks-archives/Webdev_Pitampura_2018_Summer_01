@@ -1,0 +1,12 @@
+.box {
+    height: 300px;
+    width: 300px;
+    background-color: red;
+}
+
+@media (max-width: 300px) {
+    .box {
+        width: 100px;
+        background-color: darkred;
+    }
+}
