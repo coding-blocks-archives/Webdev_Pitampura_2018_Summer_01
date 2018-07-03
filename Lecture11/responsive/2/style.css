@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: stretch;
+}
+
+.item {
+    border: lightgreen solid 1px;
+    margin: 10px;
+    height: 100px;
+    width: 150px;
+    flex-grow: 1;
+    background-color: brown;
+}
+
+.sidebar {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: lightgrey;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 5;
+    padding: 10px;
+    align-content: flex-start;
+    background-color: bisque;
+}
+
+
+@media (max-width: 500px) {
+    .sidebar {
+        flex-grow: 0;
+        height: 50px;
+    }
+    body {
+        flex-direction: column
+    }
+}

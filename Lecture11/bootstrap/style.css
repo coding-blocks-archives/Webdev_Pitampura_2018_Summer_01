@@ -1,0 +1,12 @@
+.outer-box > .row {
+    background-color: gold;
+}
+
+.outer-box > .row > div {
+    border: red solid 1px;
+}
+
+.outer-box .col .row .col {
+    margin: 2px;
+    border: blue dotted 2px;
+}
