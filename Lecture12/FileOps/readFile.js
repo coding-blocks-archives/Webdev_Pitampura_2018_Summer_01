@@ -5,6 +5,7 @@ fs.readFile(
   (err, data) => {
     if (err) throw err
 
+    // data is a buffer, convert to string to print
     console.log(data.toString())
   }
 )
