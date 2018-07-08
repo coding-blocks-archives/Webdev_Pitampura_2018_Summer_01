@@ -1,9 +1,13 @@
-const app = require('express')()
+const express = require('express')
+const app = express()
 
 const todos = ["one task", "two task"]
 
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
+
 app.get('/', (req, res) => res.send(`
-<form action="/addtodo">
+<form method="post" action="/addtodo">
   <input name="newtodo">
   <input type="submit">
 </form>
@@ -16,6 +20,11 @@ app.get('/', (req, res) => res.send(`
 
 app.get('/addtodo', (req, res) => {
   todos.push(req.query['newtodo'])
+  res.redirect('/')
+})
+
+app.post('/addtodo', (req, res) => {
+  todos.push(req.body['newtodo'])
   res.redirect('/')
 })
 
