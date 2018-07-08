@@ -1,6 +1,8 @@
 const fs = require('fs')
 const resize = require('resize-img')
 
+// First npm install resize-img
+
 fs.readFile(
   __dirname + '/cblogo.png',
   (err, data) => {
