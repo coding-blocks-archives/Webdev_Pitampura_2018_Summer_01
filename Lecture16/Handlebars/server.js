@@ -10,6 +10,8 @@ let todos = [
 ]
 // let todos ["task one", "task two"]
 
+app.use('/public', express.static(__dirname + '/public_static'))
+
 app.get('/', (req, res) => {
   res.render('main', {
     todos
@@ -19,6 +21,11 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   todos.push({task: req.body.task})
   res.redirect('/')
+})
+
+app.post('/api/todos', (req, res) => {
+  todos.push({task: req.body.task})
+  res.send(todos)
 })
 
 app.listen(5454, function () {

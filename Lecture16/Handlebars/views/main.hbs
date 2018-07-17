@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="/public/script.js"></script>
 </head>
 <body>
 <h1>Todo List</h1>
-<form action="/" method="post">
-  <input name="task">
+<form id="todo-form" action="/" method="post">
+  <input id="task" name="task">
   <input type="submit">
 </form>
-<ul>
+<ul id="todo-list">
   {{#each todos}}
     <li>{{task}}</li>
   {{/each}}
