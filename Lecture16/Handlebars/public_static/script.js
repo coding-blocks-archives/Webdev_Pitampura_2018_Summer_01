@@ -10,7 +10,7 @@ $(() => {
     $.post(
       '/api/todos',
       {task: newtask},
-      (todos) => ({})
+      (todos) => ({}) // you might refresh entire list if you want to
     )
   })
 })
