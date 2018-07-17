@@ -5,6 +5,15 @@
   <title>Title</title>
 </head>
 <body>
-<h1>{{body}}</h1>
+<h1>Todo List</h1>
+<form action="/" method="post">
+  <input name="task">
+  <input type="submit">
+</form>
+<ul>
+  {{#each todos}}
+    <li>{{task}}</li>
+  {{/each}}
+</ul>
 </body>
 </html>
