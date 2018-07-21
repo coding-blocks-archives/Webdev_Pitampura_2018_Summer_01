@@ -47,18 +47,15 @@ function uploadFile(fileName) {
     })
 }
 
-const resizedImage = downloadFile(
-    'http://codingblocks.com/logo.png'
-).then(resizeImage);
-
-setTimeout(() => {
-    resizedImage
-        .then(uploadFile)
-        .catch(err => {console.log("ERROR IN RESIZING"); throw err})
-        .then(() => console.log("All Done!!!"))
-        .catch(err => console.error(err.message))
-}, 8000)
-
-                    
-    
-                        
+(async () => {
+    try {
+        const filePath = await downloadFile('http://codingblocks.com/logo.mp3')
+        const resizedPath = await resizeImage(filePath)
+        const uploadUrl = await uploadFile(resizedPath)
+        console.log("ALl Done!!!")
+    } catch (e) {
+        console.error(e.message)
+    } finally {
+        
+    }
+})()
