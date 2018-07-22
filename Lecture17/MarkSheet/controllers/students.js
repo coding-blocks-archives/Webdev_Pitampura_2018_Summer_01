@@ -1,6 +1,8 @@
 const {Student} = require('../db/models')
 
-function getAllStudents () {
-  const students = Student.findAll()
-  return students
+module.exports = {
+  getAllStudents: async () => await Student.findAll(),
+  createStudent: async (studentName) => await Student.create({
+    name: studentName
+  })
 }

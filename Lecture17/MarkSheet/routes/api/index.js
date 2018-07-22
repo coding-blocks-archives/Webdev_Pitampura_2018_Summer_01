@@ -1,8 +1,9 @@
-const route = require('express').Router()
+const express = require('express')
+const route = express.Router()
 
-app.use('/students', require('./students'))
-app.use('/exams', require('./exams'))
-app.use('/subjects', require('./subjects'))
-app.use('/papers', require('./papers'))
+route.use('/students', require('./students'))
+route.use('/exams', require('./exams'))
+route.use('/subjects', require('./subjects'))
+route.use('/papers', require('./papers'))
 
 module.exports = route

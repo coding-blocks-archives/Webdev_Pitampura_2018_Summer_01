@@ -12,20 +12,20 @@ const Student = db.define('student', {
 
 const Subject = db.define('subject', {
   name: DataTypes.STRING,
-  maxMarks: DataTypes.NUMBER
+  maxMarks: DataTypes.INTEGER
 })
 
 const Exam = db.define('exam', {
   name: DataTypes.STRING,
   year: {
-    type: DataTypes.NUMBER,
+    type: DataTypes.INTEGER,
     validate: {
       max: 2050,
       min: 2010
     }
   },
   month: {
-    type: DataTypes.NUMBER,
+    type: DataTypes.INTEGER,
     validate: {
       max: 12,
       min: 1
@@ -44,7 +44,7 @@ const Paper = db.define('paper', {
 })
 
 const Marks = db.define('marks', {
-  amount: DataTypes.NUMBER
+  amount: DataTypes.FLOAT
 }, {
   freezeTableName: true
 })
