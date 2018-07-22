@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/*.js",
+    "cover": "nyc mocha tests/*.js",
+    "report": "nyc --reporter=html mocha tests/*.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +15,10 @@
     "hbs": "^4.0.1",
     "sequelize": "^4.38.0",
     "sqlite3": "^4.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2"
   }
 }

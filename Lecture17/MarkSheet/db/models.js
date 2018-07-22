@@ -3,7 +3,7 @@ const DataTypes = Sequelize.DataTypes
 
 const db = new Sequelize({
   dialect: 'sqlite',
-  storage: 'marksheet.db'
+  storage: process.env.TESTING ? ':memory:' : 'marksheet.db'
 })
 
 const Student = db.define('student', {
