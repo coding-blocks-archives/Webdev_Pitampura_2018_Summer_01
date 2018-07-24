@@ -7,6 +7,10 @@ module.exports = {
     ]
   },
   getPrivateFeed: async () => {
-
+    return [
+      "shh secret story",
+      "more private news",
+      "another gossip story"
+    ]
   }
 }

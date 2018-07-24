@@ -16,7 +16,15 @@ module.exports = {
   getUser: async (email) => {
     return users[email]
   },
-  createUser: async (email, password /*add if you need*/) => {
-
+  createUser: async (email, password, name, age) => {
+    if (users[email]) {
+      return false
+    }
+    users[email] = {
+      password,
+      name,
+      age
+    }
+    return users[email]
   }
 }
