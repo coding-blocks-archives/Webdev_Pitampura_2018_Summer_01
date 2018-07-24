@@ -16,6 +16,7 @@ route.post('/', async (req, res) => {
   }
 
   if (user.password === req.body.password) {
+    req.session.useremail = req.body.email
     return res.redirect('/feed')
   } else {
     res.redirect('/login')

@@ -9,7 +9,6 @@ const users = {
     "age": 30,
     "password": "passtwo"
   },
-
 }
 
 module.exports = {

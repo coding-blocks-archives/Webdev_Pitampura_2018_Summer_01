@@ -2,10 +2,8 @@ const route = require('express').Router()
 
 route.get('/', (req, res) => {
 
-  if (true /* if user is logged in*/) {
-
+  if (req.session && req.session.useremail) {
     res.redirect('/feed')
-
   } else {
     res.redirect('/news')
   }
