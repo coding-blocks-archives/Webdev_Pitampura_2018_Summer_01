@@ -2,7 +2,7 @@ process.env.TESTING = true
 const {expect} = require('chai')
 const request = require('request')
 const {db} = require('../db/models')
-const app = require('../server')
+const app = require('../server')q
 
 const BASE_URL = 'http://localhost:7777/api'
 
