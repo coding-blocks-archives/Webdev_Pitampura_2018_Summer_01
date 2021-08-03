@@ -1,0 +1,33 @@
+1. CREATE TABLE "Manufacturers" ( "Id" INTEGER NOT NULL UNIQUE, "Name" TEXT, "Country" TEXT, "Estd" INTEGER, PRIMARY KEY("Id" AUTOINCREMENT) )
+
+2.INSERT into Manufacturers (name,Country,Estd) VALUES ('Volkswagen', 'Germany', 1930);
+
+3. CREATE TABLE "Factories" ( "Id" INTEGER, "City" TEXT, "State" TEXT, "Manuf_id" INTEGER, "Capacity" INTEGER, PRIMARY KEY("Id" AUTOINCREMENT), FOREIGN KEY("Manuf_id") REFERENCES "Manufacturers" )
+
+4.
+INSERT into Factories (City,State,Manuf_id,Capacity) VALUES ('Gurgaon', 'Haryana',5, 60000);
+INSERT into Factories (City,State,Manuf_id,Capacity) VALUES ('Surat', 'Gujarat',5, 70000);
+
+5. select state,sum(capacity) from Factories group by State;
+
+6. select City from Factories group by City order by sum(capacity) desc limit 1;
+
+7. CREATE TABLE "Car_Models" ( "Id" INTEGER, "Name" TEXT, "Manuf_Id" INTEGER, "Fact_Id" INTEGER, "Year" INTEGER, "Total_Made" INTEGER, FOREIGN KEY("Manuf_Id") REFERENCES "Manufacturers"("Id"), FOREIGN KEY("Fact_Id") REFERENCES "Factories"("Id"), PRIMARY KEY("Id" AUTOINCREMENT) )
+
+8. INSERT into Car_Models (Name,Manuf_id,Fact_Id,Year,Total_Made) VALUES ('Alto', 2,2,2010, 40000);
+INSERT into Car_Models (Name,Manuf_id,Fact_Id,Year,Total_Made) VALUES ('Alto', 2,4,2010, 50000);
+
+9. select * from (select year,name,sum(Total_Made) total from Car_Models group by Year,name having year BETWEEN 2010 and 2018) group by year having max(total);
+
+
+10.
+select m.name,f.City ,(total*100) /cap from
+(
+(select Id,City,Capacity as cap from Factories GROUP by id) f
+ inner join 
+(select Manuf_id,Fact_Id,sum(Total_Made) as total from (select * from Car_Models where year='2018') GROUP by Fact_Id,Manuf_id) c
+on f.id=c.Fact_Id
+inner join 
+Manufacturers m
+on c.Manuf_id=m.id
+);
