@@ -31,3 +31,12 @@ inner join
 Manufacturers m
 on c.Manuf_id=m.id
 );
+
+11.  select name from Car_Models group by name order by count(distinct(year)) desc limit 1;
+
+12. select name from Car_Models group by name order by sum(Total_made) desc limit 1;
+
+13. delete from Car_Models where year < 2010;
+
+14. Update Car_Models set name= (select m.name from Manufacturers m where m.id=Car_Models.Manuf_id) || ' ' || Car_Models.name || ' ' || Car_Models.year;
+
